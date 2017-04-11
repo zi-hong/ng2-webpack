@@ -1,0 +1,39 @@
+{
+  "name": "ng2",
+  "description": "ng2",
+  "version": "0.0.1",
+  "author": "liuliang02",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline  --hot --config webpack.config.js",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules --config webpack.config.js"
+  },
+  "dependencies": {
+    "@angular/common": "~2.4.0",
+    "@angular/compiler": "~2.4.0",
+    "@angular/core": "~2.4.0",
+    "@angular/forms": "~2.4.0",
+    "@angular/http": "~2.4.0",
+    "@angular/platform-browser": "~2.4.0",
+    "@angular/platform-browser-dynamic": "~2.4.0",
+    "@angular/router": "~3.4.0",
+    "angular-in-memory-web-api": "~0.2.4",
+    "core-js": "^2.4.1",
+    "reflect-metadata": "^0.1.10",
+    "rxjs": "5.0.1",
+    "zone.js": "^0.7.4"
+  },
+  "devDependencies": {
+    "@types/core-js": "^0.9.41",
+    "@types/node": "^7.0.12",
+    "css-loader": "^0.28.0",
+    "file-loader": "^0.11.1",
+    "html-webpack-plugin": "^2.28.0",
+    "less-loader": "^4.0.3",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.16.1",
+    "typescript": "~2.0.10",
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^1.12.1"
+  }
+}

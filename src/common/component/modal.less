@@ -1,0 +1,42 @@
+@import '../less-config.less';
+
+.modal .modal-dialog {
+    width: 400px;
+}
+.modal-dialog {
+
+    .modal-close {
+        float: right;
+        width: 16px;
+        height: 16px;
+        background: url(../img/icon.png) -576px 0;
+
+        &:hover {
+            background-position: -576px -32px;
+        }
+    }
+    .modal-header {
+        border-bottom: none;
+    }
+
+    .modal-title {
+        margin-right: 16px;
+        font-size: 15px;
+    }
+
+    .modal-footer {
+        border-top: none;
+    }
+
+    .btn-submit {
+        width: 70px;
+    }
+
+    .modal-body {
+        padding: 30px 50px;
+        //min-height: 75px;
+        text-align: center;
+        font-size: 14px;
+        color: #666;
+    }
+}

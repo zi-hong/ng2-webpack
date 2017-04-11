@@ -1,0 +1,116 @@
+@import '../less-config.less';
+
+@datepicker-width: 175px;
+
+.datepicker {
+  /* .border-radius(); */
+  margin: 0;
+  width: @datepicker-width;
+  background-color: #fff;
+  cursor: pointer;
+  border:1px solid #b9cbe1;
+  .input-group-addon {
+    padding-left: 12px;
+    padding-right: 6px;
+    background-color: transparent;
+    border: none;
+    font-size: 13px;
+    color: #aaa;
+  }
+
+  .form-control {
+    .box-shadow(none);
+    height: 32px;
+    padding: 6px 0;
+    background-color: transparent;
+    border: none;
+    font-size: 13px;
+    color: #333;
+    cursor: pointer;
+  }
+
+  .input-group-btn {
+    border: none;
+
+    .btn {
+      padding-right: 16px;
+      border: none;
+    }
+
+    i {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: url(../img/icon.png) -192px 0;
+      vertical-align: -3px;
+    }
+  }
+
+  .dropdown-menu {
+    width: @datepicker-width;
+    left: 0!important;
+
+    table {
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    thead .h6 th{
+      padding: 8px 0;
+    }
+
+    .btn {
+      height: 25px;
+      padding: 0;
+      /* .border-radius(); */
+      border: none;
+      font-size: 12px;
+
+      .text-muted {
+        color: #ccc;
+      }
+    }
+
+    th .btn:hover,
+    th .btn:focus {
+      position: relative;
+    }
+
+    .btn-block {
+
+    }
+
+    .btn-info {
+      color: #fff;
+      background-color: #2194e1;
+    }
+
+    .pull-left,
+    .pull-right {
+      padding: 0 10px;
+    }
+
+    .glyphicon {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background: url(../img/icon.png) -413px -2px;
+
+      &:before {
+        content: '';
+      }
+    }
+
+    .pull-right .glyphicon {
+      background-position: -440px -2px;
+    }
+  }
+
+  &:active {
+    background-color: #f7f9fa;
+
+    .input-group-btn .btn{
+      background-color: #f7f9fa;
+    }
+  }
+}

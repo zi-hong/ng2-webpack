@@ -1,0 +1,98 @@
+@import '../less-config.less';
+
+@icon-side-length: 16px;
+
+.icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background: url(../img/icon.png) no-repeat;
+    vertical-align: -3px;
+
+    &.icon-search {
+        background-position: -288px 0;
+    }
+
+    &.icon-export {
+        background-position: -240px 0;
+    }
+    
+    &.icon-sort-up {
+        background-position: -364px 0;
+
+        &.sort-cur {
+            background-position: -364px -32px;
+        }
+    }
+
+    &.icon-sort-down {
+        background-position: -336px 0;
+
+        &.sort-cur {
+            background-position: -336px -32px;
+        }
+    }
+}
+
+.btn:active {
+    .icon-export {
+        background-position: -240px -32px;
+    }
+}
+
+.glyphicon-ok-circle {
+    font-size: 20px;
+    color: #33CC00;
+}
+
+.glyphicon-remove-circle {
+    font-size: 20px;
+    color: red;
+}
+
+.small-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: -7px;
+    margin-left: 10px;
+    
+
+    &.icon-agent {
+        background: url(../img/icon-agent.png) no-repeat;
+    }
+
+    &.icon-qingtui {
+        background: url(../img/icon-qingtui.png) no-repeat;
+    }
+
+    &.icon-coop {
+        background: url(../img/icon-coop.png) no-repeat;
+    }
+
+    &.icon-addCoop {
+        background: url(../img/icon-coop-add.png) no-repeat;
+    }
+
+    &.icon-output {
+        background: url(../img/icon-output.png) no-repeat;
+    }
+}
+
+.active {
+
+    .icon-agent {
+        background: url(../img/icon-agent-hover.png) no-repeat;
+    }
+
+    .icon-qingtui {
+        background: url(../img/icon-qingtui-hover.png) no-repeat;
+    }
+    
+    .icon-coop {
+        background: url(../img/icon-coop-hover.png) no-repeat;
+    }
+}
+

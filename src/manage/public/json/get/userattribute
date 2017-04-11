@@ -1,0 +1,25 @@
+{
+  "success": true,
+  "object": {
+    "alertChangePwd": false,
+    "authority": "call-records,index,tuidan-moniter,jinjian-moniter,operateview,operatelist,ordergl,partnerqtdk,partneryqdk,partnerdktj,parterlist,agent-company,coop,enterpriseInfo,agent,user,total-view,parterview",
+    "rights": "editAgentCompany",
+    "userName": "admin_test",
+    "managerUser": {
+      "base": {
+        "dataMap": {
+          "rightUrls": ""
+        }
+      },
+      "id": "10",
+      "userName": "admin_test",
+      "password": "60f6ab9f16b42dc49bb847f6b38f4a2b",
+      "rights": "",
+      "authority": "call-records,index,tuidan-moniter,jinjian-moniter,operateview,operatelist,ordergl,partnerqtdk,partneryqdk,partnerdktj,parterlist,agent-company,coop,enterpriseInfo,agent,user,total-view,parterview",
+      "roleId": "49",
+      "optionals": [
+        "ROLE_ID"
+      ]
+    }
+  }
+}
