@@ -1,6 +1,7 @@
 var path = require('path')
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var WebpackMd5Hash = require('webpack-md5-hash');
 
 
 var releaseUrl = '';
@@ -20,8 +21,8 @@ var obj = {
     output: {
         path: path.resolve(__dirname, './'),
         publicPath: '/',
-        filename: releaseUrl + '[name].[hash].js',
-        chunkFilename: releaseUrl + '[name].[hash].js'
+        filename: releaseUrl + '[name].[chunkhash:8].js',
+        chunkFilename: releaseUrl + '[name].[chunkhash:8].js'
     },
     module: {
         rules: [{
@@ -33,7 +34,7 @@ var obj = {
                     {
                         loader:'file-loader',
                         options: {
-                            name: releaseUrl + 'img/[name].[hash].[ext]'
+                            name: releaseUrl + 'img/[name].[hash:8].[ext]'
                         }
                     }
                 ],
@@ -50,7 +51,7 @@ var obj = {
         extensions: ['.js','.ts']
     },
     devServer: {
-        host: '127.0.0.1',
+        host: '10.252.56.114',
         port: 8090,
         // historyApiFallback: true,
         noInfo: true,
@@ -61,9 +62,10 @@ var obj = {
         }
     },
     plugins: [
+        new WebpackMd5Hash(),
         new webpack.optimize.CommonsChunkPlugin({
             name: "angular",
-            filename: releaseUrl + "angular.[hash].js"
+            filename: releaseUrl + "angular.[chunkhash:8].js"
         }),
         new HtmlWebpackPlugin({
             filename: indexUrl + 'index.html',
