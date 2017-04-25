@@ -1,0 +1,9 @@
+<div>
+    <input  placeholder="{{placeholder}}"
+            [(ngModel)]="date"
+            ngbDatepicker
+            (ngModelChange)="changedDate($event)"
+            #d="ngbDatepicker">
+    <input type='button' (click)='open(d)' value='选择日期'>
+    <span>{{date | json}}</span>
+</div>

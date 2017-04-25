@@ -1,0 +1,177 @@
+.pl {
+    padding-left: 0;
+}
+.pr {
+    padding-right: 0;
+}
+.pl5 {
+    padding-left: 5px;
+}
+.w20 {
+    width: 13%;
+}
+.w30 {
+    width: 28%;
+}
+.w50 {
+    width: 46%;
+}
+.w70 {
+    width: 68%;
+}
+.w80 {
+    width: 83%;
+}
+.w100 {
+    width: 81%;
+}
+.green {
+    color: #0C0;
+}
+.red {
+    color: red;
+}
+.blue {
+    color: #00F;
+}
+.bg {
+    background-color: #F6FAFD;
+}
+.right {
+    float: right;
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+.cursor:hover {
+    cursor: pointer;
+}
+.wrap {
+    margin-bottom: 40px;
+}
+.item1 {
+    width: 14%;
+}
+.item2 {
+    width: 18%;
+}
+.item3 {
+    width: 18%;
+}
+/*页面统计样式（推单、进件、放款、还款、逾期、清退）*/
+.title-list {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    font-size: 0;
+    border: 1px solid #000;
+    li {
+        display: inline-block;
+        position: relative;
+        //width: 16.6%;
+        //border: 1px solid #000;
+        box-sizing: border-box;
+    }
+}
+.title-wrap {
+    li {
+        height: 70px;
+        line-height: 70px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .title-item:before,
+    .title-item:after {
+        position: absolute;
+        z-index: 10;
+        left: 100%;
+        top: 0;
+        content: '';
+        width: 0;
+        height: 0;
+        border: 35px solid transparent;
+        border-left: 23px solid #FFF;
+    }
+    .bg:before {
+        border-left: 23px solid #F6FAFD;
+    }
+    .title-item:after {
+        z-index: 1;
+        border-left: 23px solid #000;
+    }
+}
+.content-wrap {
+    overflow: hidden;
+    li {
+        padding: 10px 5px 0;
+        padding-bottom: 1000px;
+        margin-bottom: -1000px;
+        font-size: 14px;
+        vertical-align: top;
+        border-right: 1px solid #000;
+    }
+    li:last-child {
+        border-right: none;
+    }
+    .item {
+        margin-bottom: 10px;
+        span {
+            display: inline-block;
+            height: 25px;
+            line-height: 25px;
+
+        }
+        span:first-child {
+            color: #8E8E8E;
+        }
+        span:last-child {
+            font-weight: bold;
+        }
+    }
+}
+/*中间两个表格的标题*/
+.index-title {
+    padding-bottom: 15px;
+    h2,
+    h3 {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        vertical-align: bottom;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    h3 {
+        margin-left: 10px;
+        font-size: 14px;
+        white-space: pre;
+    }
+}
+
+.index-table {
+    margin-bottom: 20px;
+    td {
+        text-align: center;
+        padding: 10px 2px;
+        font-size: 14px;
+        white-space: normal;
+    }
+    /*类目名称*/
+    .table-title {
+        font-size: 14px;
+        font-weight: bold;
+    }
+    /*字段名称样式*/
+    .key-title,
+    .key-title td {
+        font-weight: bold;
+        background-color: #F6FAFD;
+    }
+    .table-title-border {
+        border-bottom: 3px solid #DDD;
+    }
+
+
+}

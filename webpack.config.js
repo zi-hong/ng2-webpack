@@ -3,6 +3,8 @@ var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var WebpackMd5Hash = require('webpack-md5-hash');
 
+// var CompressionPlugin = require("compression-webpack-plugin");
+
 
 var releaseUrl = '';
 var indexUrl = ''
@@ -11,12 +13,13 @@ if(process.env.NODE_ENV === 'production'){
     indexUrl = '_released/view/';
 }
 
-// var componentUrl = '';
 
 var obj = {
     entry: {
-        angular:'./src/angular.ts',
-        main: './src/main.ts'
+        main: './src/main.ts',
+        angular:['@angular/common','@angular/core','@angular/compiler','@angular/platform-browser','@angular/platform-browser-dynamic','@angular/forms','@angular/http','@angular/router'],
+        base: ['reflect-metadata','core-js/es6','rxjs','zone.js/dist/zone'],
+        ngbootstrap:['@ng-bootstrap/ng-bootstrap']
     },
     output: {
         path: path.resolve(__dirname, './'),
@@ -46,7 +49,7 @@ var obj = {
     },
     resolve: {
         alias: {
-           'zone.js':'zone.js/dist/zone'
+
         },
         extensions: ['.js','.ts']
     },
@@ -57,21 +60,26 @@ var obj = {
         noInfo: true,
         contentBase:'src/',
         publicPath: '/',
+        setup: function(app) {
+            app.post(/.+/, function(req, res) {
+                res.redirect(req.originalUrl);
+            });
+        },
         proxy: {
 
         }
     },
     plugins: [
         new WebpackMd5Hash(),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: "angular",
-            filename: releaseUrl + "angular.[chunkhash:8].js"
-        }),
+
+        new webpack.optimize.CommonsChunkPlugin({names: ['ngbootstrap','angular','base'], filename: releaseUrl + '[name].[chunkhash:8].js'}),
+
         new HtmlWebpackPlugin({
             filename: indexUrl + 'index.html',
             template: 'src/index.templ',
             hash: false
         }),
+
         new webpack.ContextReplacementPlugin(/angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,path.resolve(__dirname, 'doesnotexist/'))
     ],
     devtool: '#eval-source-map'

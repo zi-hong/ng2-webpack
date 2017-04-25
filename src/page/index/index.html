@@ -1,0 +1,168 @@
+<div class="wrap">
+    <ul class="title-list title-wrap">
+        <li class="title-item bg item1">
+            <a class="cursor" href="#/tuidan-moniter" target="_blank">推单</a>
+        </li>
+        <li class="title-item item1">
+            <a class="cursor" href="#/jinjian-moniter" target="_blank">进件</a>
+        </li>
+        <li class="title-item bg item2"><a class="cursor">放款</a></li>
+        <li class="title-item item2"><a class="cursor">还款</a></li>
+        <li class="title-item bg item2" ><a class="cursor">逾期</a></li>
+        <li class="item3"><a class="cursor">清退</a></li>
+    </ul>
+    <ul class="title-list content-wrap">
+        <li class="item1" >
+            <div class="item">
+                <span class="w70">今日推单</span>
+                <span class="w30 right">{{homeTuidan.jrtd}}</span>
+            </div>
+            <div class="item">
+                <span class="w70">昨日推单</span>
+                <span class="w30 right">{{homeTuidan.zrtd}}</span>
+            </div>
+            <div class="item">
+                <span class="w70">本月日均推单</span>
+                <span class="w30 right">{{homeTuidan.byrjtd}}</span>
+            </div>
+            <div class="item">
+                <span class="w70">今日推单公寓数</span>
+                <span class="w30 right">{{homeTuidan.jrtdgys}}</span>
+            </div>
+            <div class="item">
+                <span class="w70">昨日推单公寓数</span>
+                <span class="w30 right">{{homeTuidan.zrtdgys}}</span>
+            </div>
+            <div class="item">
+                <span style="width:64%">推单完成率</span>
+                <span style="width:32%" class="right">{{homeTuidan.tdwcl}}</span>
+            </div>
+            <div class="item">
+                <span style="width:64%">系统拒绝率</span>
+                <span style="width:32%" class="right">{{homeTuidan.xtjjl}}</span>
+            </div>
+        </li>
+        <li class="item1" >
+            <div class="item">
+                <span class="w70">今日进件</span>
+                <span class="w30 right">{{homeJinjian.jrjj}}</span>
+            </div>
+            <div class="item">
+                <span class="w70">昨日进件</span>
+                <span class="w30 right">{{homeJinjian.zrjj}}</span>
+            </div>
+            <div class="item">
+                <span class="w70">人工初审</span>
+                <span class="w30 right">{{homeJinjian.jrrgcs}}</span>
+            </div>
+            <div class="item">
+                <span class="w70">人工复审</span>
+                <span class="w30 right">{{homeJinjian.jrrgfs}}</span>
+            </div>
+            <div class="item">
+                <span class="w70">审核成功</span>
+                <span class="w30 right">{{homeJinjian.jrshcg}}</span>
+            </div>
+            <div class="item">
+                <span class="w70">审核失败</span>
+                <span class="w30 right">{{homeJinjian.jrshsb}}</span>
+            </div>
+            <div class="item">
+                <span class="w70">剩余待审核订单</span>
+                <span class="w30 blue right">{{homeJinjian.sydshdd}}</span>
+            </div>
+        </li>
+        <li class="item2" >
+            <div class="item">
+                <span class="w50">今日放款笔数</span>
+                <span class="w50 right">{{homeFangkuan.jrfkbs}}</span>
+            </div>
+            <div class="item">
+                <span class="w50">今日放款金额</span>
+                <span class="w50 right">{{homeFangkuan.jrfkje}}</span>
+            </div>
+            <div class="item">
+                <span class="w50">待放款笔数</span>
+                <span class="w50 right">{{homeFangkuan.dfkbs}}</span>
+            </div>
+            <div class="item">
+                <span class="w50">待放款金额</span>
+                <span class="w50 right">{{homeFangkuan.dfkje}}</span>
+            </div>
+        </li>
+        <li class="item2" >
+            <div class="item">
+                <span class="w50">今日应还笔数</span>
+                <span class="w50 right">{{homeHuankuan.jryhbs}}</span>
+            </div>
+            <div class="item">
+                <span class="w50">今日应还金额</span>
+                <span class="w50 right">{{homeHuankuan.jryhje}}</span>
+            </div>
+            <div class="item">
+                <span class="w50">实际还款笔数</span>
+                <span class="w50 right">{{homeHuankuan.sjhkbs}}</span>
+            </div>
+            <div class="item">
+                <span class="w50">实际还款金额</span>
+                <span class="w50 right">{{homeHuankuan.sjhkje}}</span>
+            </div>
+            <div class="item">
+                <span class="w50">未还款笔数</span>
+                <span class="w50 right">{{homeHuankuan.whbs}}</span>
+            </div>
+            <div class="item">
+                <span class="w50">未还款金额</span>
+                <span class="w50 right">{{homeHuankuan.whje}}</span>
+            </div>
+        </li>
+        <li class="item2" >
+            <div class="item">
+                <span class="w50">今日发生逾期</span>
+                <span class="w50 right">{{homeYuqi.jryqbs}}</span>
+            </div>
+            <div class="item">
+                <span class="w50">今日逾期金额</span>
+                <span class="w50 right">{{homeYuqi.jryqje}}</span>
+            </div>
+            <div class="item">
+                <span class="w50">当前累计逾期</span>
+                <span class="w50 right">{{homeYuqi.dqljyqbs}}</span>
+            </div>
+            <div class="item">
+                <span class="w50">当前逾期金额</span>
+                <span class="w50 right">{{homeYuqi.dqljyqje}}</span>
+            </div>
+            <div class="item">
+                <span class="w70">3天以上逾期笔数</span>
+                <span class="w30 right">{{homeYuqi.tys3}}</span>
+            </div>
+            <div class="item">
+                <span class="w50">平均逾期天数</span>
+                <span class="w50 right">{{homeYuqi.pjyqts}}</span>
+            </div>
+        </li>
+        <li class="item3" >
+            <div class="item">
+                <span class="w50">未结清笔数</span>
+                <span class="w50 right">{{homeQingtui.qtwjqbs}}</span>
+            </div>
+            <div class="item">
+                <span class="w50">未结清金额</span>
+                <span class="w50 right">{{homeQingtui.qtwjqje}}</span>
+            </div>
+            <div class="item">
+                <span class="w70">已结清还款平均天数</span>
+                <span class="w30 right">{{homeQingtui.yjqpjts}}</span>
+            </div>
+        </li>
+    </ul>
+    <div>
+        <ui-datepicker 
+            placeholder='日期'
+            [date]=date
+            (selDate)="selDate($event)"
+            ></ui-datepicker>
+    </div>
+    <input type='button' value='show' (click)='getDate()' />
+</div>

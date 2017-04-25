@@ -5,7 +5,7 @@
   "author": "liuliang02",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline  --hot --config webpack.config.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline --config webpack.config.js",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules --config webpack.config.js"
   },
   "dependencies": {
@@ -17,7 +17,9 @@
     "@angular/platform-browser": "~2.4.0",
     "@angular/platform-browser-dynamic": "~2.4.0",
     "@angular/router": "~3.4.0",
+    "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.23",
     "angular-in-memory-web-api": "~0.2.4",
+    "bootstrap": "^4.0.0-alpha.6",
     "core-js": "^2.4.1",
     "reflect-metadata": "^0.1.10",
     "rxjs": "5.0.1",

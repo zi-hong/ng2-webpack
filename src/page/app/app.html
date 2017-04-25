@@ -1,0 +1,14 @@
+<div class="header">
+    <a href="javascript:;" class="top-logo" title="58月付运营统计管理系统" id="top-logo">
+        <img src="common/img/top-logo.png" alt="58月付运营统计管理系统" />
+    </a>
+    <div class="header-info">
+        <span class="name-txt">{{userInfoService.userInfo.userName}}</span>
+        <a href="javascript:;" class="user-name" ng-click="modifyPassword($event)"><span></span>修改密码</a>
+        <a href="/manage/public/view/get/logout" class="logout"><span></span>退出</a>
+    </div>
+</div>
+<side></side>
+<div class="body-view" ng-class="ml">
+    <router-outlet></router-outlet>
+</div>
