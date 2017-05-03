@@ -2,8 +2,7 @@ var path = require('path')
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var WebpackMd5Hash = require('webpack-md5-hash');
-
-// var CompressionPlugin = require("compression-webpack-plugin");
+var CleanPlugin = require('clean-webpack-plugin')
 
 
 var releaseUrl = '';
@@ -12,7 +11,6 @@ if(process.env.NODE_ENV === 'production'){
     releaseUrl = '_released/resources/';
     indexUrl = '_released/view/';
 }
-
 
 var obj = {
     entry: {
@@ -25,7 +23,7 @@ var obj = {
         path: path.resolve(__dirname, './'),
         publicPath: '/',
         filename: releaseUrl + '[name].[chunkhash:8].js',
-        chunkFilename: releaseUrl + '[name].[chunkhash:8].js'
+        chunkFilename: releaseUrl + '[id].[chunkhash:8].js'
     },
     module: {
         rules: [{
@@ -43,15 +41,19 @@ var obj = {
                 ],
             }, {
                 test: /\.less$/,
-                use:['style-loader','css-loader','less-loader'],
+                use:['style-loader','css-loader','less-loader']
+            },{
+                test:/\.css$/,
+                use:['style-loader','css-loader']
             }
         ]
     },
     resolve: {
         alias: {
-
+            bootstrapCss:'bootstrap/dist/css/bootstrap.min.css',
+            src: path.join(__dirname, 'src')
         },
-        extensions: ['.js','.ts']
+        extensions: ['.js','.ts','css']
     },
     devServer: {
         host: '10.252.56.114',
@@ -64,9 +66,6 @@ var obj = {
             app.post(/.+/, function(req, res) {
                 res.redirect(req.originalUrl);
             });
-        },
-        proxy: {
-
         }
     },
     plugins: [
@@ -86,7 +85,19 @@ var obj = {
 }
 
 if(process.env.NODE_ENV === 'production'){
+
+    obj.plugins.unshift(
+
+        new CleanPlugin(['_released/resources'], {
+            root: path.resolve(__dirname, './'),
+            verbose: true,
+            dry: false
+        })
+
+    )
+
     obj.plugins.push(
+
         new webpack.optimize.UglifyJsPlugin({
             sourceMap: false,
             mangle: true,
@@ -95,9 +106,11 @@ if(process.env.NODE_ENV === 'production'){
                 warnings: false
             }
         }),
+
         new webpack.LoaderOptionsPlugin({
             minimize: true
         })
+
     )
     obj.devtool = false;
 }

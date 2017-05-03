@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
-import { UserInfoService } from '../userInfoService/userInfoService';
+import { UserInfoService } from 'src/service/userInfoService';
 
-import { WindowRef } from '../windowRef';
+import { WindowRef } from 'src/service/windowRef';
 
 
 
