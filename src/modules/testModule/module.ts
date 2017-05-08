@@ -6,7 +6,7 @@ import { HttpModule }    from '@angular/http';
 
 import { NgbModule }     from '@ng-bootstrap/ng-bootstrap';
 
-import { TestListComponent }   from './index';
+import { TestListComponent }   from './page/index';
 
 const TestRoutes: Route[] = [
     { path: 'list', component: TestListComponent }
